@@ -5,7 +5,30 @@ Console.WriteLine("[A]dd a TODO");
 Console.WriteLine("[R]emove a TODO");
 Console.WriteLine("[E]xit");
 
-string userChoice = Console.ReadLine();
-Console.WriteLine(userChoice);
+var userChoice = Console.ReadLine();
+
+if (userChoice == "S")
+{
+    PrintSelectedOption(" See all TODOS");
+}
+else if (userChoice == "A")
+{
+    PrintSelectedOption(" Add a TODO");
+}
+else if (userChoice == "R")
+{
+    PrintSelectedOption(" Remove a TODO");
+}
+else if(userChoice == "E")
+{
+    PrintSelectedOption(" Exit ");
+}
+
+
 
 Console.ReadKey();
+
+void PrintSelectedOption(string selectedOption)
+{
+    Console.WriteLine("Selected Option : " + selectedOption);
+}
